@@ -35,6 +35,12 @@ public class Inventory : MonoBehaviour
            Debug.Log("Инвентарь полон!");
        }
    }
+   
+   public bool HasItem(Item item)
+   {
+       return items.Contains(item);
+   }
+
 
 
 

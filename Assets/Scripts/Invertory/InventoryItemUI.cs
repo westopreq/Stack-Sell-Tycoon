@@ -5,57 +5,51 @@ using UnityEngine.EventSystems;
 
 public class InventoryItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public TMP_Text itemNameText;   // Название предмета
-    public TMP_Text itemPriceText;  // Цена предмета
-    public Image itemImage;         // Иконка предмета
+    public TMP_Text itemNameText;
+    public TMP_Text itemPriceText;
+    public Image itemImage;
 
-    private Item itemData;          // Данные предмета
+    private Item itemData;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
-    private Transform originalParent; // Оригинальный родитель объекта
-    private bool isDragged = false;   // Флаг, чтобы понять, перетаскивается ли объект
+    private Transform originalParent;
+    private Transform parentAfterDrag; // Родитель после перетаскивания
+    private bool isDragged = false;
     private Canvas canvas;
 
-    private Inventory inventory;     // Ссылка на инвентарь
-    private RectTransform inventoryRectTransform; // Ссылка на RectTransform панели инвентаря
+    private Inventory inventory;
+    private RectTransform inventoryRectTransform;
+    private CreatureInventory creatureInventory;
+    private RectTransform creatureInventoryRectTransform;
+
+    private CreatureInventoryUI creatureInventoryUI; // Ссылка на UI инвентаря существа
 
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
-
-        // Проверяем и добавляем CanvasGroup, если его нет
-        canvasGroup = GetComponent<CanvasGroup>();
-        if (canvasGroup == null)
-        {
-            canvasGroup = gameObject.AddComponent<CanvasGroup>();
-        }
+        canvasGroup = GetComponent<CanvasGroup>() ?? gameObject.AddComponent<CanvasGroup>();
 
         originalParent = transform.parent;
-        canvas = GetComponentInParent<Canvas>(); // Получаем ссылку на Canvas
-        inventory = FindObjectOfType<Inventory>(); // Получаем ссылку на инвентарь
+        parentAfterDrag = originalParent; // По умолчанию карточка возвращается к оригинальному родителю
+        canvas = GetComponentInParent<Canvas>();
 
-        // Получаем RectTransform панели инвентаря
+        inventory = FindObjectOfType<Inventory>();
         inventoryRectTransform = inventory.inventoryUI.GetComponent<RectTransform>();
+
+        creatureInventory = FindObjectOfType<CreatureInventory>();
+        if (creatureInventory != null)
+        {
+            creatureInventoryRectTransform = creatureInventory.inventoryUI.GetComponent<RectTransform>();
+            creatureInventoryUI = creatureInventory.inventoryUI.GetComponent<CreatureInventoryUI>(); // Получаем UI инвентаря существа
+        }
     }
 
-    // Метод для обновления UI элемента
     public void SetupItem(Item item)
     {
-        itemData = item; // Сохраняем ссылку на предмет
-    
-        // Лог, чтобы убедиться, что префаб присутствует
-        if (itemData.itemPrefab != null)
-        {
-            Debug.Log("Префаб предмета: " + itemData.itemPrefab.name);
-        }
-        else
-        {
-            Debug.LogError("Префаб не найден для предмета: " + item.itemName);
-        }
-    
-        itemNameText.text = item.itemName;
+        itemData = item;
+        itemNameText.text = item.itemName;  // Используем itemName вместо name
         itemPriceText.text = $"${item.itemPrice}";
-    
+
         if (item.itemIcon != null)
         {
             itemImage.sprite = Sprite.Create(
@@ -66,117 +60,203 @@ public class InventoryItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         }
     }
 
+    public Item GetItem() => itemData;
 
-    // Метод для получения данных предмета (нужно для выбрасывания)
-    public Item GetItem()
-    {
-        return itemData;
-    }
-
-    // Начало перетаскивания
     public void OnBeginDrag(PointerEventData eventData)
     {
         isDragged = true;
-        canvasGroup.alpha = 0.6f; // Делаем объект полупрозрачным
-        canvasGroup.blocksRaycasts = false; // Отключаем блокировку лучей, чтобы элемент не мешал кликам
-        transform.SetParent(canvas.transform); // Переносим элемент на верхний уровень канваса
+        canvasGroup.alpha = 0.6f;
+        canvasGroup.blocksRaycasts = false;
+        transform.SetParent(canvas.transform);
+
+        // Извлекаем текущий инвентарь через публичную переменную
+        creatureInventory = creatureInventoryUI.CurrentInventory;
     }
 
-    // Перетаскивание
     public void OnDrag(PointerEventData eventData)
     {
         if (isDragged)
         {
-            rectTransform.position = Input.mousePosition; // Следуем за курсором
+            rectTransform.position = Input.mousePosition;
         }
     }
 
-    // Завершение перетаскивания
+    // В методе OnEndDrag
     public void OnEndDrag(PointerEventData eventData)
     {
-        canvasGroup.alpha = 1f; // Восстанавливаем прозрачность
-        canvasGroup.blocksRaycasts = true; // Возвращаем блокировку лучей
-
-        // Получаем координаты мыши в локальных координатах инвентаря
+        canvasGroup.alpha = 1f;
+        canvasGroup.blocksRaycasts = true;
+    
         Vector2 localMousePosition;
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(inventoryRectTransform, Input.mousePosition, canvas.worldCamera, out localMousePosition);
-
-        // Проверяем, находится ли курсор внутри RectTransform инвентаря
-        if (inventoryRectTransform.rect.Contains(localMousePosition))
+    
+        // Проверяем основной инвентарь игрока
+        bool isInsidePlayerInventory = RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            inventoryRectTransform, Input.mousePosition, canvas.worldCamera, out localMousePosition) &&
+            inventoryRectTransform.rect.Contains(localMousePosition);
+    
+        // Проверяем инвентарь существа
+        bool isInsideCreatureInventory = false;
+        if (creatureInventoryRectTransform != null)
         {
-            // Если в пределах инвентаря, возвращаем карточку в инвентарь
-            ReturnItemToInventory();
-            Debug.Log("Предмет отпущен внутри инвентаря.");
+            isInsideCreatureInventory = RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                creatureInventoryRectTransform, Input.mousePosition, canvas.worldCamera, out localMousePosition) &&
+                creatureInventoryRectTransform.rect.Contains(localMousePosition);
         }
+    
+        // Если предмет в пределах инвентаря существа
+        if (isInsideCreatureInventory)
+        {
+            if (creatureInventory != null)
+            {
+                MoveItemToCreatureInventory(creatureInventory);
+                Debug.Log("Предмет перемещён в инвентарь существа.");
+            }
+            else
+            {
+                Debug.LogError("Нет выбранного инвентаря существа.");
+            }
+        }
+        // Если предмет в пределах инвентаря игрока
+        else if (isInsidePlayerInventory)
+        {
+            MoveItemToInventory(inventory);
+            Debug.Log("Предмет перемещён в инвентарь игрока.");
+        }
+        // Если предмет вне инвентаря, выбрасываем его в мир
         else
         {
-            // Если не в пределах инвентаря, создаем предмет в мире
             ThrowItem();
-            Debug.Log("Предмет отпущен вне инвентаря и преобразован в игровой объект.");
+            Debug.Log("Предмет выброшен в мир.");
         }
     }
 
-    // Метод для выбрасывания предмета в мир
+
+    private void MoveItemToInventory(Inventory newInventory)
+    {
+        Debug.Log($"Moving {itemData.itemName} to {newInventory.name}");
+
+        // Проверяем, действительно ли предмет уже есть в новом инвентаре
+        if (newInventory.HasItem(itemData))
+        {
+            Debug.Log($"Item {itemData.itemName} already exists in {newInventory.name}, skipping move.");
+            return;
+        }
+
+        bool removed = false;
+
+        // Удаление из старого инвентаря
+        if (creatureInventory.HasItem(itemData))
+        {
+            Debug.Log($"Removing {itemData.itemName} from Creature Inventory");
+            creatureInventory.RemoveItem(itemData);
+            removed = true;
+        }
+        else if (inventory.HasItem(itemData))
+        {
+            Debug.Log($"Removing {itemData.itemName} from Player Inventory");
+            inventory.RemoveItem(itemData);
+            removed = true;
+        }
+
+        if (!removed)
+        {
+            Debug.LogError($"ERROR: {itemData.itemName} не найден в инвентарях!");
+            return;
+        }
+
+        // Добавление в новый инвентарь
+        newInventory.AddItem(itemData);
+        Debug.Log($"Added {itemData.itemName} to {newInventory.name}");
+
+        // Перемещение карточки UI в новый инвентарь
+        transform.SetParent(newInventory.inventoryUI.transform);
+        transform.localPosition = Vector3.zero;
+
+        // Обновление UI
+        inventory.inventoryUI.RefreshUI(inventory);
+        newInventory.inventoryUI.RefreshUI(newInventory);
+
+        Debug.Log("Moved to new inventory and UI refreshed");
+    }
+
+    private void MoveItemToCreatureInventory(CreatureInventory newInventory)
+    {
+        Debug.Log($"Moving {itemData.itemName} to {newInventory.name}");
+
+        // Проверяем, действительно ли предмет уже есть в новом инвентаре
+        if (newInventory.HasItem(itemData))
+        {
+            Debug.Log($"Item {itemData.itemName} already exists in {newInventory.name}, skipping move.");
+            return;
+        }
+
+        bool removed = false;
+
+        // Удаление из старого инвентаря
+        if (inventory.HasItem(itemData))
+        {
+            Debug.Log($"Removing {itemData.itemName} from Player Inventory");
+            inventory.RemoveItem(itemData);
+            removed = true;
+        }
+        else if (creatureInventory.HasItem(itemData))
+        {
+            Debug.Log($"Removing {itemData.itemName} from Creature Inventory");
+            creatureInventory.RemoveItem(itemData);
+            removed = true;
+        }
+
+        if (!removed)
+        {
+            Debug.LogError($"ERROR: {itemData.itemName} не найден в инвентарях!");
+            return;
+        }
+
+        // Добавление в новый инвентарь существа
+        newInventory.AddItem(itemData);
+        Debug.Log($"Added {itemData.itemName} to {newInventory.name}");
+
+        // Перемещение карточки UI в новый инвентарь
+        transform.SetParent(newInventory.inventoryUI.transform);
+        transform.localPosition = Vector3.zero;
+
+        // Обновление UI
+        inventory.inventoryUI.RefreshUI(inventory);
+        newInventory.inventoryUI.RefreshUI(newInventory);
+
+        Debug.Log("Moved to creature's inventory and UI refreshed");
+    }
+
     private void ThrowItem()
     {
         if (itemData != null && itemData.itemPrefab != null)
         {
-            // Логируем информацию о префабе перед созданием
-            Debug.Log("Префаб найден: " + itemData.itemPrefab.name);
-    
-            // Получаем мировую позицию мыши
             Vector3 spawnPosition = GetMouseWorldPosition();
-    
             if (spawnPosition != Vector3.zero)
             {
-                // Создаем объект в мире в позиции курсора
                 GameObject newItem = Instantiate(itemData.itemPrefab, spawnPosition, Quaternion.identity);
-    
-                // Устанавливаем высоту предмета над землей (примерно 0.5 метра)
                 newItem.transform.position = new Vector3(spawnPosition.x, 0.5f, spawnPosition.z);
-    
-                // Удаляем предмет из инвентаря
+
                 inventory.RemoveItem(itemData);
-    
-                // Удаляем карточку UI
                 Destroy(gameObject);
             }
             else
             {
-                Debug.LogError("Ошибка: Не удалось получить корректную позицию мыши в мире.");
+                Debug.LogError("Не удалось определить позицию предмета.");
             }
         }
         else
         {
-            // Логируем, если префаб пустой
-            Debug.LogError("Префаб не найден для предмета: " + itemData.itemName);
+            Debug.LogError("У предмета отсутствует префаб.");
         }
     }
 
-
-
-    // Метод для возврата предмета в инвентарь
-    private void ReturnItemToInventory()
-    {
-        // Восстанавливаем позицию предмета в UI
-        transform.SetParent(originalParent);
-        transform.localPosition = Vector3.zero;
-
-        // Добавляем предмет обратно в инвентарь
-        inventory.AddItem(itemData);
-
-        // Обновляем UI инвентаря
-        inventory.inventoryUI.RefreshUI(inventory);
-    }
-
-    // Получение позиции мыши в мире
     private Vector3 GetMouseWorldPosition()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            return hit.point; // Возвращаем точку столкновения
+            return hit.point;
         }
         return Vector3.zero;
     }
