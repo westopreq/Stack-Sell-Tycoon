@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class RoomBuilder : MonoBehaviour
 {
@@ -161,10 +162,10 @@ public class RoomBuilder : MonoBehaviour
     {
         List<GameObject> wallsToRemove = new List<GameObject>();
 
-        // Проходим по всем построенным комнатам (кроме текущей)
+        // Проходим по всем построенным комнатам (включая первую)
         foreach (var existingRoom in builtRooms)
         {
-            if (existingRoom == newRoom) continue; // Пропускаем текущую комнату
+            if (existingRoom == newRoom) continue; // Пропускаем текущую новую комнату
 
             // Проходим по всем стенам новой комнаты
             foreach (Transform newWall in newRoom.transform)
@@ -177,7 +178,8 @@ public class RoomBuilder : MonoBehaviour
                     if (!existingWall.CompareTag("Wall")) continue; // Проверяем только стены
 
                     // Сравниваем расстояние между центрами стен
-                    if (Vector3.Distance(newWall.position, existingWall.position) < wallRemovalThreshold)
+                    float distance = Vector3.Distance(newWall.position, existingWall.position);
+                    if (distance < wallRemovalThreshold)
                     {
                         wallsToRemove.Add(newWall.gameObject);  // Добавляем стену для удаления
                         wallsToRemove.Add(existingWall.gameObject);  // Добавляем стену для удаления
@@ -189,8 +191,19 @@ public class RoomBuilder : MonoBehaviour
         // Удаляем найденные стены
         foreach (var wall in wallsToRemove)
         {
-            Destroy(wall);
+            if (wall != null) // Проверяем, что стена все еще существует
+            {
+                // Задержка, чтобы дать время на выполнение других операций
+                StartCoroutine(DestroyAfterFrame(wall)); 
+            }
         }
+    }
+    
+    // Корутин для задержки удаления
+    private IEnumerator DestroyAfterFrame(GameObject wall)
+    {
+        yield return null; // Даем время на завершение всех операций в этом кадре
+        Destroy(wall); // Удаляем объект после кадра
     }
 
     private bool IsPositionOnExistingFloor(Vector3 position)
