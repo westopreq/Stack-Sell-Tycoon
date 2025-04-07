@@ -1,0 +1,1291 @@
+{
+    "objectsData": [
+        {
+            "objectName": "mesh_chair02(Clone)",
+            "position": {
+                "x": -5.176393985748291,
+                "y": 0.279677152633667,
+                "z": -3.5765414237976076
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "mesh_mug(Clone)",
+            "position": {
+                "x": -5.648763179779053,
+                "y": 1.276677131652832,
+                "z": -2.942439556121826
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "mesh_mouse_01(Clone)",
+            "position": {
+                "x": -4.458763599395752,
+                "y": 1.2456772327423096,
+                "z": -2.9293808937072756
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "mesh_laptop_01(Clone)",
+            "position": {
+                "x": -5.109763145446777,
+                "y": 1.2556771039962769,
+                "z": -2.9296276569366457
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "mesh_desk_01(Clone)",
+            "position": {
+                "x": -5.533607482910156,
+                "y": 0.25,
+                "z": -2.9316000938415529
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Terminal",
+            "position": {
+                "x": -4.645200252532959,
+                "y": 0.25,
+                "z": -2.9316000938415529
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (15)",
+            "position": {
+                "x": 3.561999797821045,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (14)",
+            "position": {
+                "x": 3.871999979019165,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (13)",
+            "position": {
+                "x": 4.0279998779296879,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (12)",
+            "position": {
+                "x": 4.5279998779296879,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (11)",
+            "position": {
+                "x": 4.7779998779296879,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (10)",
+            "position": {
+                "x": 5.028000354766846,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (9)",
+            "position": {
+                "x": 5.200000286102295,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (23)",
+            "position": {
+                "x": 3.561999797821045,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (22)",
+            "position": {
+                "x": 3.871999979019165,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (21)",
+            "position": {
+                "x": 4.0279998779296879,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (20)",
+            "position": {
+                "x": 4.5279998779296879,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (19)",
+            "position": {
+                "x": 4.7779998779296879,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (18)",
+            "position": {
+                "x": 5.028000354766846,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (17)",
+            "position": {
+                "x": 5.200000286102295,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (16)",
+            "position": {
+                "x": 5.3420000076293949,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (8)",
+            "position": {
+                "x": 5.3420000076293949,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (2)",
+            "position": {
+                "x": 3.561999797821045,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (3)",
+            "position": {
+                "x": 3.871999979019165,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (4)",
+            "position": {
+                "x": 4.0279998779296879,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (5)",
+            "position": {
+                "x": 4.5279998779296879,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (6)",
+            "position": {
+                "x": 4.7779998779296879,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (7)",
+            "position": {
+                "x": 5.028000354766846,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (1)",
+            "position": {
+                "x": 5.200000286102295,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point",
+            "position": {
+                "x": 5.3420000076293949,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Storage_Rack_02 (2)",
+            "position": {
+                "x": 4.438000202178955,
+                "y": 0.25,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (15)",
+            "position": {
+                "x": -0.9180001020431519,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (14)",
+            "position": {
+                "x": -0.6080000996589661,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (13)",
+            "position": {
+                "x": -0.45200014114379885,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (12)",
+            "position": {
+                "x": 0.047999899834394458,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (11)",
+            "position": {
+                "x": 0.29799991846084597,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (10)",
+            "position": {
+                "x": 0.547999918460846,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (9)",
+            "position": {
+                "x": 0.7200000286102295,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (23)",
+            "position": {
+                "x": -0.9180001020431519,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (22)",
+            "position": {
+                "x": -0.6080000996589661,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (21)",
+            "position": {
+                "x": -0.45200014114379885,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (20)",
+            "position": {
+                "x": 0.047999899834394458,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (19)",
+            "position": {
+                "x": 0.29799991846084597,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (18)",
+            "position": {
+                "x": 0.547999918460846,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (17)",
+            "position": {
+                "x": 0.7200000286102295,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (16)",
+            "position": {
+                "x": 0.8619999885559082,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (8)",
+            "position": {
+                "x": 0.8619999885559082,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (2)",
+            "position": {
+                "x": -0.9180001020431519,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (3)",
+            "position": {
+                "x": -0.6080000996589661,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (4)",
+            "position": {
+                "x": -0.45200014114379885,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (5)",
+            "position": {
+                "x": 0.047999899834394458,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (6)",
+            "position": {
+                "x": 0.29799991846084597,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (7)",
+            "position": {
+                "x": 0.547999918460846,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (1)",
+            "position": {
+                "x": 0.7200000286102295,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point",
+            "position": {
+                "x": 0.8619999885559082,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Storage_Rack_02 (1)",
+            "position": {
+                "x": -0.04200008139014244,
+                "y": 0.25,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (15)",
+            "position": {
+                "x": -4.978000164031982,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (14)",
+            "position": {
+                "x": -4.668000221252441,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (13)",
+            "position": {
+                "x": -4.512000560760498,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (12)",
+            "position": {
+                "x": -4.01200008392334,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (11)",
+            "position": {
+                "x": -3.762000322341919,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (10)",
+            "position": {
+                "x": -3.51200008392334,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (9)",
+            "position": {
+                "x": -3.3400001525878908,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (23)",
+            "position": {
+                "x": -4.978000164031982,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (22)",
+            "position": {
+                "x": -4.668000221252441,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (21)",
+            "position": {
+                "x": -4.512000560760498,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (20)",
+            "position": {
+                "x": -4.01200008392334,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (19)",
+            "position": {
+                "x": -3.762000322341919,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (18)",
+            "position": {
+                "x": -3.51200008392334,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (17)",
+            "position": {
+                "x": -3.3400001525878908,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (16)",
+            "position": {
+                "x": -3.197999954223633,
+                "y": 1.0740000009536744,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (8)",
+            "position": {
+                "x": -3.197999954223633,
+                "y": 1.7300000190734864,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (2)",
+            "position": {
+                "x": -4.978000164031982,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (3)",
+            "position": {
+                "x": -4.668000221252441,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (4)",
+            "position": {
+                "x": -4.512000560760498,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (5)",
+            "position": {
+                "x": -4.01200008392334,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (6)",
+            "position": {
+                "x": -3.762000322341919,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (7)",
+            "position": {
+                "x": -3.51200008392334,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point (1)",
+            "position": {
+                "x": -3.3400001525878908,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "point",
+            "position": {
+                "x": -3.197999954223633,
+                "y": 2.3989999294281008,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Storage_Rack_02",
+            "position": {
+                "x": -4.1020002365112309,
+                "y": 0.25,
+                "z": 5.501999855041504
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "wall_028",
+            "position": {
+                "x": -6.626778602600098,
+                "y": 1.701480507850647,
+                "z": -1.2591543197631837
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "door_003",
+            "position": {
+                "x": -8.063146591186524,
+                "y": 1.6640629768371583,
+                "z": -2.108078956604004
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "NewDoor",
+            "position": {
+                "x": -6.6528000831604,
+                "y": 2.0,
+                "z": 0.00030800001695752144
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Cube (4)",
+            "position": {
+                "x": 6.650000095367432,
+                "y": 2.0,
+                "z": 0.0
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Cube (2)",
+            "position": {
+                "x": 0.0,
+                "y": 2.0,
+                "z": -6.650000095367432
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Cube (1)",
+            "position": {
+                "x": 0.0,
+                "y": 2.0,
+                "z": 6.650000095367432
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "RoomWithDoor(Clone)",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Env_ResidentBuilding_01",
+            "position": {
+                "x": -27.3599853515625,
+                "y": 0.19999980926513673,
+                "z": 1.769989013671875
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Mushroom_01_LOD1",
+            "position": {
+                "x": -25.8260498046875,
+                "y": 0.0,
+                "z": -32.694610595703128
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Mushroom_01_LOD0",
+            "position": {
+                "x": -25.8260498046875,
+                "y": 0.0,
+                "z": -32.694610595703128
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Mushroom_01",
+            "position": {
+                "x": -25.8260498046875,
+                "y": 0.0,
+                "z": -32.694610595703128
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "GroundBase_01",
+            "position": {
+                "x": -8.989990234375,
+                "y": -0.29899999499320986,
+                "z": -1.0469970703125
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Env_Motel_01",
+            "position": {
+                "x": -27.399993896484376,
+                "y": 0.20000076293945313,
+                "z": -36.519989013671878
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Env_Road_Straight_02 (3)",
+            "position": {
+                "x": -15.92523193359375,
+                "y": 0.20000000298023225,
+                "z": -32.5
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Branch_01",
+            "position": {
+                "x": -26.339263916015626,
+                "y": 0.0,
+                "z": -31.848785400390626
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Env_Road_Straight_02 (1)",
+            "position": {
+                "x": -15.92523193359375,
+                "y": 0.20000000298023225,
+                "z": 0.510009765625
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Env_Road_Straight_01",
+            "position": {
+                "x": -15.92523193359375,
+                "y": 0.20000000298023225,
+                "z": 18.70001220703125
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Env_Road_Straight_02",
+            "position": {
+                "x": -15.92523193359375,
+                "y": 0.20000000298023225,
+                "z": 10.489990234375
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Stump_01_LOD1",
+            "position": {
+                "x": -25.461761474609376,
+                "y": 0.000014901161193847656,
+                "z": -1.339202880859375
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Stump_01_LOD0",
+            "position": {
+                "x": -25.461761474609376,
+                "y": 0.000014901161193847656,
+                "z": -1.339202880859375
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Stump_01",
+            "position": {
+                "x": -25.461761474609376,
+                "y": 0.000014901161193847656,
+                "z": -1.339202880859375
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "GroundBase_01 (1)",
+            "position": {
+                "x": -22.829986572265626,
+                "y": -0.29899999499320986,
+                "z": -1.0469970703125
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Env_CommercialBuilding_01",
+            "position": {
+                "x": -27.769989013671876,
+                "y": 0.20000076293945313,
+                "z": 26.969970703125
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Rock_04",
+            "position": {
+                "x": -26.324249267578126,
+                "y": 0.0,
+                "z": -3.078338623046875
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Env_Road_Straight_02 (2)",
+            "position": {
+                "x": -15.92523193359375,
+                "y": 0.20000000298023225,
+                "z": 33.5999755859375
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "UI",
+            "position": {
+                "x": 960.0,
+                "y": 1011.7337646484375,
+                "z": 0.00009560585021972656
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "World",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "SaveGame (1)",
+            "position": {
+                "x": 1508.0001220703125,
+                "y": 911.7337646484375,
+                "z": 0.00009560585021972656
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Text (TMP)",
+            "position": {
+                "x": 1237.0,
+                "y": 1011.7338256835938,
+                "z": -0.000026464462280273438
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "experience",
+            "position": {
+                "x": 960.0006713867188,
+                "y": 863.875,
+                "z": 0.00021767616271972656
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "GameObject (1)",
+            "position": {
+                "x": -11.906999588012696,
+                "y": 0.624000072479248,
+                "z": -84.18000030517578
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "ItemDatabase",
+            "position": {
+                "x": -19.318565368652345,
+                "y": 19.920339584350587,
+                "z": -12.186840057373047
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Text (TMP)",
+            "position": {
+                "x": 1508.0001220703125,
+                "y": 1011.7338256835938,
+                "z": 0.00009560585021972656
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Text (TMP)",
+            "position": {
+                "x": 1508.0001220703125,
+                "y": 911.7337646484375,
+                "z": 0.00009560585021972656
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "EventSystem",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Exit",
+            "position": {
+                "x": 122.0,
+                "y": 1011.7338256835938,
+                "z": 0.00003457069396972656
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "NPCSpawner",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Pause",
+            "position": {
+                "x": 397.0,
+                "y": 1011.73388671875,
+                "z": -0.000026464462280273438
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Shop",
+            "position": {
+                "x": 1791.0001220703125,
+                "y": 1011.7337646484375,
+                "z": 0.00009560585021972656
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Selectedinvertory",
+            "position": {
+                "x": 679.0,
+                "y": 1011.733642578125,
+                "z": 0.00003457069396972656
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Text (TMP)",
+            "position": {
+                "x": 397.0,
+                "y": 1011.73388671875,
+                "z": -0.000026464462280273438
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "money",
+            "position": {
+                "x": 891.8470458984375,
+                "y": 964.4400024414063,
+                "z": 0.00009560585021972656
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Canvas",
+            "position": {
+                "x": 960.0000610351563,
+                "y": 540.0,
+                "z": 0.00003457069396972656
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Garbage_Can_Green",
+            "position": {
+                "x": -8.826690673828125,
+                "y": 0.7450000047683716,
+                "z": 8.412353515625
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Room",
+            "position": {
+                "x": -8.242348670959473,
+                "y": 9.70541763305664,
+                "z": -10.914734840393067
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "GameManager",
+            "position": {
+                "x": -8.242348670959473,
+                "y": 9.70541763305664,
+                "z": -10.914734840393067
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Lights",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Main Camera",
+            "position": {
+                "x": -1.1131528615951539,
+                "y": 15.0,
+                "z": 1.0065653324127198
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "invertory",
+            "position": {
+                "x": -19.318565368652345,
+                "y": 19.920339584350587,
+                "z": -12.186840057373047
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Directional Light",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": -40.618919372558597
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "level",
+            "position": {
+                "x": 1029.2469482421875,
+                "y": 964.43994140625,
+                "z": 0.00021767616271972656
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "GameObject (2)",
+            "position": {
+                "x": -4.089996337890625,
+                "y": 0.7160000205039978,
+                "z": -1.29998779296875
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Text (TMP)",
+            "position": {
+                "x": 122.0,
+                "y": 1011.7338256835938,
+                "z": 0.00003457069396972656
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Text (TMP)",
+            "position": {
+                "x": 679.0,
+                "y": 1011.733642578125,
+                "z": 0.00003457069396972656
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Money/Level/Experience",
+            "position": {
+                "x": 960.0000610351563,
+                "y": 939.4400024414063,
+                "z": 0.00015664100646972656
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "SaveSystem",
+            "position": {
+                "x": 999.5827026367188,
+                "y": 736.791748046875,
+                "z": -3.3255648612976076
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Terrain",
+            "position": {
+                "x": -505.0,
+                "y": 0.0,
+                "z": -504.0
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "SaveGame",
+            "position": {
+                "x": 1508.0001220703125,
+                "y": 1011.7338256835938,
+                "z": 0.00009560585021972656
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "GameObject (1)",
+            "position": {
+                "x": -9.511993408203125,
+                "y": 0.7160000205039978,
+                "z": -1.29998779296875
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "GameObject",
+            "position": {
+                "x": -11.906999588012696,
+                "y": 0.6240000128746033,
+                "z": 51.22999954223633
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "Text (TMP)",
+            "position": {
+                "x": 1791.0001220703125,
+                "y": 1011.7337646484375,
+                "z": 0.00009560585021972656
+            },
+            "isActive": true
+        },
+        {
+            "objectName": "PlayerInvertory",
+            "position": {
+                "x": 1237.0,
+                "y": 1011.7338256835938,
+                "z": -0.000026464462280273438
+            },
+            "isActive": true
+        }
+    ]
+}
